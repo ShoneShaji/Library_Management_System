@@ -18,7 +18,7 @@ function Register() {
       await axios.post(
         "http://127.0.0.1:8000/register/",
         data
-      );
+        );
 
       alert("Registration Successful");
 
@@ -33,37 +33,30 @@ function Register() {
 
   return (
 
-    <div className="container mt-5">
+    <div>
 
-      <div className="card p-4">
+      <input
+        type="text"
+        placeholder="Username"
+        className="form-control mb-3 p-3"
+        onChange={(e) => setUsername(e.target.value)}
+      />
 
-        <h2>Register</h2>
+      <input
+        type="password"
+        placeholder="Password"
+        className="form-control mb-3 p-3"
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
-        <input
-          type="text"
-          placeholder="Username"
-          className="form-control mt-3"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
-        <input
-          type="password"
-          placeholder="Password"
-          className="form-control mt-3"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button
-          className="btn btn-success mt-3"
-          onClick={registerUser}
-        >
-          Register
-        </button>
-
-      </div>
+      <button
+        className="btn btn-primary w-100 p-3 fw-bold"
+        onClick={registerUser}
+      >
+        Register
+      </button>
 
     </div>
   );
 }
-
-export default Register;
+  export default Register;

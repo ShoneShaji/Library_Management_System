@@ -22,6 +22,8 @@ function Login() {
 
       localStorage.setItem("token", response.data.access);
 
+      alert("Login Successful");
+
       window.location.reload();
 
     } catch (error) {
@@ -32,34 +34,29 @@ function Login() {
   };
 
   return (
-    <div className="container mt-5">
 
-      <div className="card p-4">
+    <div>
 
-        <h2>Login</h2>
+      <input
+        type="text"
+        placeholder="Username"
+        className="form-control mb-3 p-3"
+        onChange={(e) => setUsername(e.target.value)}
+      />
 
-        <input
-          type="text"
-          placeholder="Username"
-          className="form-control mt-3"
-          onChange={(e) => setUsername(e.target.value)}
-        />
+      <input
+        type="password"
+        placeholder="Password"
+        className="form-control mb-3 p-3"
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="form-control mt-3"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button
-          className="btn btn-primary mt-3"
-          onClick={loginUser}
-        >
-          Login
-        </button>
-
-      </div>
+      <button
+        className="btn btn-dark w-100 p-3 fw-bold"
+        onClick={loginUser}
+      >
+        Login
+      </button>
     </div>
   );
 }

@@ -71,7 +71,7 @@ function BorrowList() {
 
         <h2>Borrowed Books</h2>
 
-        <table className="table mt-4">
+        <table className="table table-hover mt-4">
 
           <thead>
 
@@ -104,7 +104,7 @@ function BorrowList() {
                   <td>
 
                     <button
-                      className="btn btn-success"
+                      className="btn btn-success btn-custom"
                       onClick={() => returnBook(borrow.id)}
                     >
                       Return

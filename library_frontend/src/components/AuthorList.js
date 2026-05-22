@@ -71,7 +71,7 @@ function AuthorList() {
 
         <h2>Authors</h2>
 
-        <table className="table mt-4">
+        <table className="table table-hover mt-4">
 
           <thead>
 
@@ -100,7 +100,7 @@ function AuthorList() {
                   <td>
 
                     <button
-                      className="btn btn-danger"
+                      className="btn btn-danger btn-custom"
                       onClick={() => deleteAuthor(author.id)}
                     >
                       Delete

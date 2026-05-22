@@ -79,7 +79,7 @@ function BookList() {
             onChange={(e) => setSearch(e.target.value)}
             />
 
-        <table className="table mt-4">
+        <table className="table table-hover mt-4">
 
           <thead>
 
@@ -115,7 +115,7 @@ function BookList() {
                   <td>
 
                     <button
-                        className="btn btn-danger"
+                        className="btn btn-danger btn-custom"
                         onClick={() => deleteBook(book.id)}
                     >
                         Delete

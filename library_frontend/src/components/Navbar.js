@@ -1,36 +1,45 @@
 import React from "react";
+import {
+  FaBook,
+  FaUsers,
+  FaExchangeAlt,
+  FaSignOutAlt
+} from "react-icons/fa";
 
 function Navbar() {
 
   const logoutUser = () => {
-
     localStorage.removeItem("token");
-
     window.location.reload();
-
   };
 
   return (
 
-    <nav className="navbar navbar-dark bg-dark p-3">
+    <div className="sidebar">
 
-      <div className="container-fluid">
+      <h2>Library LMS</h2>
+      <ul>
 
-        <h3 className="text-white">
-          Library Management
-        </h3>
+        <li>
+          <FaBook /> Books
+        </li>
 
-        <button
-          className="btn btn-danger"
-          onClick={logoutUser}
-        >
-          Logout
-        </button>
+        <li>
+          <FaUsers /> Authors
+        </li>
 
-      </div>
+        <li>
+          <FaExchangeAlt /> Borrow
+        </li>
 
-    </nav>
+        <li onClick={logoutUser}>
+          <FaSignOutAlt /> Logout
+        </li>
+
+      </ul>
+
+     </div>
   );
 }
 
-export default Navbar;
+export default Navbar; 
